@@ -23,6 +23,14 @@ public class App { // main class
     }
 
     public static void main(String[] args) throws Exception {
+    
+        ogrenci o1; // tanımlama
+        o1 = new ogrenci(); // belllekte o1 nesnesi oluşturuldu
+        o1.ogrNo = 1234;
+        o1.ogrAd = "ali";
+        o1.ogrSoyad = "calak";
+        o1.yas = 19;
+        
         /*
          * int x;
          * x = 15;
