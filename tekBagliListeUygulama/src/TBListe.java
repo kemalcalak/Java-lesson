@@ -80,8 +80,24 @@ public class TBListe {
         }
         return sayac;
     }   
+    //sayıları sıralar
+    public void sirala() {
+        Dugum temp = this.ilk;
+        while (temp != null) {
+            Dugum innerTemp = this.ilk;
+            while (innerTemp != null) {
+                if (innerTemp.getSonraki() != null && innerTemp.getVeri() > innerTemp.getSonraki().getVeri()) {
+                    int tempData = innerTemp.getVeri();
+                    innerTemp.setVeri(innerTemp.getSonraki().getVeri());
+                    innerTemp.getSonraki().setVeri(tempData);
+                }
+                innerTemp = innerTemp.getSonraki();
+            }
+            temp = temp.getSonraki();
+        }
+    }
     
-    //
+    
 
     // listedeki tüm elemanların değerlerini ekrana yazma
     public void listele() {
