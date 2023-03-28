@@ -32,4 +32,11 @@ public class Dugum {
         this.sonraki = ref;
     }
 
+    public void setOnceki(Dugum yeni) {
+    }
+
+    public Dugum getOnceki() {
+        return null;
+    }
+
 }
