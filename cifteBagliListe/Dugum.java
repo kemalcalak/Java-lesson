@@ -15,6 +15,10 @@ public class Dugum {
         this.sonraki=null;
     }
 
+    public void yazdir(){
+        System.out.println(" "+this.veri);
+    }
+
     public void setVeri(int veri) {
         this.veri = veri;
     }
