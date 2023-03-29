@@ -29,4 +29,11 @@ public class Dugum {
     public void setSonraki(Dugum ref){
         this.sonraki=ref;
     }
+
+    public void setOnceki(Dugum yeni) {
+    }
+
+    public Dugum getOnceki() {
+        return null;
+    }
 }
