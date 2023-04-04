@@ -36,4 +36,6 @@ public class Dugum {
     public Dugum getOnceki() {
         return null;
     }
+
+    
 }

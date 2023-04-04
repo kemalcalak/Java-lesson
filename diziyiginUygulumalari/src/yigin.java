@@ -31,6 +31,7 @@ public class yigin {
         return true;
     }
 
+
     
 
     public int pop(){
@@ -51,5 +52,32 @@ public class yigin {
         return this.yiginDizi[this.yiginIndex];
     }
 
+    public void print(){
+        if (this.isEmpty()) {
+            System.out.println("Yığın boş!");
+            return;
+        }
+        for (int i = this.yiginIndex; i >= 0; i--) {
+            System.out.println(this.yiginDizi[i]);
+        }
+    }
+
+    public void printReverse(){
+        if (this.isEmpty()) {
+            System.out.println("Yığın boş!");
+            return;
+        }
+        for (int i = 0; i <= this.yiginIndex; i++) {
+            System.out.println(this.yiginDizi[i]);
+        }
+    }
+
+    public void clear(){
+        this.yiginIndex = -1;
+    }
+
+    
+
+    
     
 }
