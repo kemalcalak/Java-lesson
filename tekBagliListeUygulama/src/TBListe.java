@@ -46,7 +46,6 @@ public class TBListe {
         temp.setSonraki(yeni);
     }
 
-    
     // listenin eleman sayısını hesaplama
     public int elemanSayisi() {
         int sayac = 0;
@@ -83,7 +82,8 @@ public class TBListe {
         return sayac;
     }
 
-    // ödev2: arayaEkle fonksiyonunu sonaEkle fonksişyonu kullanılacak şekilde revize edilmesi
+    // ödev2: arayaEkle fonksiyonunu sonaEkle fonksişyonu kullanılacak şekilde
+    // revize edilmesi
     public void arayaEkle(int index, int deger) {
         if (index < 0 || index > elemanSayisi()) {
             System.out.println("Geçersiz indeks!");
@@ -106,7 +106,8 @@ public class TBListe {
         temp.setSonraki(yeni);
     }
 
-    // ödev3: sıralıEkle fonksiyonu değerleri sayısal olarak sıralı ekleyecek şekilde yazılacak (indis parametresi olmayan)
+    // ödev3: sıralıEkle fonksiyonu değerleri sayısal olarak sıralı ekleyecek
+    // şekilde yazılacak (indis parametresi olmayan)
     public void sıralıEkle(int deger) {
         Dugum yeni = new Dugum(deger);
         if (this.ilk == null) {
@@ -222,52 +223,51 @@ public class TBListe {
         System.out.println("-------------");
 
     }
-        
-    //verilen değeri silme birden fazla varsa ilkini silme
-    /* 
+
+    // verilen değeri silme birden fazla varsa ilkini silme
+    /*
      * public void degeriSil(int deger) {
-        
-        if (this.ilk == null) {
-            return;
-        }
-    
-        if (this.ilk.getVeri() == deger) {
-            this.ilk = this.ilk.getSonraki();
-            return;
-        }
-    
-        Dugum onceki = this.ilk;
-        Dugum suanki = onceki.getSonraki();
-        while (suanki != null) {
-            if (suanki.getVeri() == deger) {
-                onceki.setSonraki(suanki.getSonraki());
-                return;
-            }
-            onceki = suanki;
-            suanki = suanki.getSonraki();
-        }
-    }
+     * 
+     * if (this.ilk == null) {
+     * return;
+     * }
+     * 
+     * if (this.ilk.getVeri() == deger) {
+     * this.ilk = this.ilk.getSonraki();
+     * return;
+     * }
+     * 
+     * Dugum onceki = this.ilk;
+     * Dugum suanki = onceki.getSonraki();
+     * while (suanki != null) {
+     * if (suanki.getVeri() == deger) {
+     * onceki.setSonraki(suanki.getSonraki());
+     * return;
+     * }
+     * onceki = suanki;
+     * suanki = suanki.getSonraki();
+     * }
+     * }
      */
-    
-    //ödev4: verilen değeri listeden silen(birden fazla varsa hepsini silmelidir)fonksiyonu yazın
+
+    // ödev4: verilen değeri listeden silen(birden fazla varsa hepsini
+    // silmelidir)fonksiyonu yazın
     public void degeriSil(int deger) {
         if (this.ilk == null) {
             return;
         }
-        
+
         Dugum temp = this.ilk;
         Dugum onceki = null;
-    
+
         while (temp != null) {
             if (temp.getVeri() == deger) {
-               if (onceki == null) {
+                if (onceki == null) {
                     this.ilk = temp.getSonraki();
-                }
-                else {
+                } else {
                     onceki.setSonraki(temp.getSonraki());
                 }
-            }
-            else {
+            } else {
                 onceki = temp;
             }
             temp = temp.getSonraki();
